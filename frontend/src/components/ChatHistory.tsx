@@ -103,7 +103,7 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ userId }) => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const endpoint = import.meta.env.VITE_BACKEND_URI + '/api/chat/history';
+        const endpoint = import.meta.env.VITE_BACKEND_URI + 'api/chat/history';
         console.log(endpoint);
         
         let store = sessionStorage.getItem('authData');

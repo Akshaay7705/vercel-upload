@@ -41,7 +41,7 @@ const SignupLogin: React.FC<SignupLoginProps> = ({ onSuccess }) => {
       //   body: JSON.stringify({ encryptedData, sessionKey }),
       // });
 
-      const endpoint = `${import.meta.env.VITE_BACKEND_URI}/api${isSignup ? '/signup' : '/login'}`;
+      const endpoint = `${import.meta.env.VITE_BACKEND_URI}api${isSignup ? '/signup' : '/login'}`;
       console.log(endpoint);
       
       axios.post(endpoint, formData)

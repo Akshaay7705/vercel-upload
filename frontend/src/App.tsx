@@ -140,7 +140,7 @@ const handleInputSubmit = async (input: string) => {
       
 
       // Save to backend
-      await axios.post(import.meta.env.VITE_BACKEND_URI + `/api/chat/save`, {
+      await axios.post(import.meta.env.VITE_BACKEND_URI + `api/chat/save`, {
         
         prompt: input,
         response: 'Request blocked by quantum firewall',
@@ -196,7 +196,7 @@ const handleInputSubmit = async (input: string) => {
       });
 
       // Save to backend
-      await axios.post(import.meta.env.VITE_BACKEND_URI + `/api/chat/save`, {
+      await axios.post(import.meta.env.VITE_BACKEND_URI + `api/chat/save`, {
         prompt: input,
         response: output,
         processingTime: totalTime,
@@ -240,7 +240,7 @@ const handleInputSubmit = async (input: string) => {
     });
 
     // ✅ Save successful chat to backend
-    await axios.post(import.meta.env.VITE_BACKEND_URI + `/api/chat/save`, {
+    await axios.post(import.meta.env.VITE_BACKEND_URI + `api/chat/save`, {
       prompt: input,
       response: output,
       processingTime: totalTime,

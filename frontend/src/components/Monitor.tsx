@@ -327,7 +327,7 @@ const Monitor: React.FC = () => {
         let token = JSON.parse(store).token;
         console.log(token);
         
-      const res = await fetch(import.meta.env.VITE_BACKEND_URI + '/api/chat/stats', {
+      const res = await fetch(import.meta.env.VITE_BACKEND_URI + 'api/chat/stats', {
         headers: { Authorization: token },
       });
       const json = await res.json();
