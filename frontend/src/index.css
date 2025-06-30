@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#00FFCC] to-[#FF007A] hover:shadow-lg hover:shadow-[#00FFCC]/25 text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-black/20 backdrop-blur-md border-2 border-[#00FFCC]/30 hover:bg-white/5 text-[#00FFCC] font-bold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .card {
+    @apply bg-black/20 backdrop-blur-md border-2 border-[#00FFCC]/30 rounded-2xl shadow-2xl hover:shadow-[#00FFCC]/10 transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-black/20 border-2 border-[#00FFCC]/30 rounded-xl text-white placeholder-[#00FFCC]/40 focus:outline-none focus:border-[#00FFCC] focus:shadow-lg focus:shadow-[#00FFCC]/25 transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #00FFCC 0%, #FF007A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(15px);
+    background: rgba(0, 255, 204, 0.05);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+  }
+  
+  .quantum-glow {
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3), 0 0 40px rgba(0, 255, 204, 0.1);
+  }
+  
+  .neon-border {
+    border: 2px solid #00FFCC;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5), inset 0 0 10px rgba(0, 255, 204, 0.1);
+  }
+}
+
+/* Custom Quantum Animations */
+@keyframes quantum-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes quantum-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes quantum-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes quantum-wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-quantum-pulse {
+  animation: quantum-pulse 2s ease-in-out infinite;
+}
+
+.animate-quantum-float {
+  animation: quantum-float 3s ease-in-out infinite;
+}
+
+.animate-quantum-spin {
+  animation: quantum-spin 3s linear infinite;
+}
+
+.animate-quantum-wave {
+  animation: quantum-wave 2s linear infinite;
+}
+
+/* Custom scrollbar with quantum theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 14, 29, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00FFCC, #FF007A);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #FF007A, #00FFCC);
+}
+
+/* Enhanced focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #00FFCC;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 255, 204, 0.2);
+}
+
+/* Quantum particle effects */
+.quantum-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #00FFCC;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00FFCC, 0 0 20px #00FFCC, 0 0 30px #00FFCC;
+  animation: quantum-float 4s ease-in-out infinite;
+}
+
+.quantum-particle:nth-child(2n) {
+  background: #FF007A;
+  box-shadow: 0 0 10px #FF007A, 0 0 20px #FF007A, 0 0 30px #FF007A;
+  animation-delay: -2s;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Quantum loading animation */
+.quantum-loader {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 255, 204, 0.3);
+  border-radius: 50%;
+  border-top-color: #00FFCC;
+  animation: quantum-spin 1s ease-in-out infinite;
+}
+
+/* Futuristic text effects */
+.quantum-text {
+  background: linear-gradient(45deg, #00FFCC, #FF007A, #00FFCC);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: quantum-wave 3s ease-in-out infinite;
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 204, 0.1) 50%, transparent 70%);
+  background-size: 200% 200%;
+  animation: quantum-wave 2s linear infinite;
+}
