@@ -1,8 +1,8 @@
 import { loadPyodide } from 'pyodide';
 
 // Placeholder credentials (not used in mock)
-const AWS_ACCESS_KEY = 'AKIAUIMRIJERYX2YS4RR'; // Your access key
-const AWS_SECRET_KEY = 'PB02bYBPkvwYn8pzN2gGumZvskHv7Q0/p0980gCO'; // Your secret key
+const AWS_ACCESS_KEY =import.meta.env.VITE_AWS_ACCESS_KEY; // Your access key
+const AWS_SECRET_KEY = import.meta.env.VITE_AWS_SECRET_KEY; // Your secret key
 const REGION = 'us-west-2'; // Your region
 
 export async function setupQuantum() {
