@@ -1,9 +1,6 @@
 import { loadPyodide } from 'pyodide';
 
-// Placeholder credentials (not used in mock)
-const AWS_ACCESS_KEY =import.meta.env.VITE_AWS_ACCESS_KEY; // Your access key
-const AWS_SECRET_KEY = import.meta.env.VITE_AWS_SECRET_KEY; // Your secret key
-const REGION = 'us-west-2'; // Your region
+
 
 export async function setupQuantum() {
   const pyodide = await loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.27.7/full/' });
