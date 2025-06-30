@@ -19,7 +19,7 @@ import { quantumEncryptor } from './utils/quantumEncrypt';
 import { ChatHistory } from './components/ChatHistory';
 import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
-
+import img from "../public/black_circle_360x360.svg"
 
 type TabType = 'chat' | 'monitor' | 'settings' | 'signup';
 type AppState = 'intro' | 'auth' | 'main';
@@ -336,6 +336,8 @@ if (activeTab === 'signup' && isLoggedIn) {
 
 
     return (
+      <>
+       
     <div className="min-h-screen bg-gradient-to-br from-[#F5F5F5] to-[#E0E0E0] text-[#333333]">
       <Toaster 
         position="top-right"
@@ -352,6 +354,15 @@ if (activeTab === 'signup' && isLoggedIn) {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4">
+          <a href="https://bolt.new/" target="_blank" rel="noopener noreferrer">
+            <img
+              src={img}
+              alt="Built with Bolt"
+              className="w-16 h-16 md:w-14 md:h-20"
+            />
+          </a>
+          </div>
               <div className="p-2 bg-[#666666] rounded-full animate-pulse-slow">
                 <Shield className="h-6 w-6 text-white" />
               </div>
@@ -595,6 +606,7 @@ if (activeTab === 'signup' && isLoggedIn) {
         </div>
       </footer>
     </div>
+    </>
   );
 }
 
